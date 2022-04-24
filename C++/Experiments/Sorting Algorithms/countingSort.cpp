@@ -20,9 +20,7 @@ void countSort(vec_int *numbers, short code) {
 	
 	*numbers = {};
 	for(std::pair<int, int> num: groups) {
-		while(num.second--) {
-			(*numbers).push_back(num.first);
-		}
+		(*numbers).insert((*numbers).end(), num.second, num.first); 
 	}
 	
 	if(code % 2) {  // Odd for ascending
@@ -88,7 +86,7 @@ int main() {
 		std::cin >> inp;
 	}
 	std::cout << "\nASCENDING  | ";
-	realCountSort(&numbers, 1);
+	countSort(&numbers, 1);
 	std::cout << "\nDESCENDING | ";
-	realCountSort(&numbers, 0);
+	countSort(&numbers, 0);
 }
