@@ -19,7 +19,7 @@ void insertionSortAsc(vec_int *numbers) {
 	}
 }
 
-// Ascending with steps
+// Descending with steps
 void insertionSortAscVis(vec_int *numbers) {
 	int nu;
 	for(vec_int::iterator ori = (*numbers).begin() + 1; ori < (*numbers).end(); ori++) {
